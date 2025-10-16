@@ -57,11 +57,14 @@ emacs cronTkMaps.sh
 8) Fix the year & minimum run number  
 ```
 emacs cronTkMaps.sh 
-#Change 2025 and 398080
-python3 listProducer.py -y 2025 --min 398080
+
+8.1) Change 2025 and 398080
+```
+#Change values in this line: python3 listProducer.py -y 2025 --min 398080
 ```
 
-9) Eventually import (or clean) the cache 
+9) Eventually import (or clean) the cache
+
 Cache is stored in cache_Express.txt and _Prompt.txt files
 
 10) Test execution 
