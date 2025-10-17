@@ -1,2 +1,3 @@
-cache_*.txt
-runs_To_TkMaps_*.txt
+cache_*.txt*
+runs_To_TkMaps_*.txt*
+__pycache__/

@@ -66,7 +66,7 @@ emacs cronTkMaps.sh
 
 9) Eventually import (or clean) the cache
 
-Cache is stored in cache_Express.txt and _Prompt.txt files
+Cache is stored in these files: cache_Express.txt and _Prompt.txt
 
 10) Test execution 
 ```
@@ -81,5 +81,5 @@ crontab -e
 12) Add the cronjob details (every hour, at minute 20)
 
 ```
-20 * * * * /data/users/event_display/dpgtkdqm/cronjobs/TkMapProducer/TkMapProducer/cronTkMaps.sh > /data/users/event_display/dpgtkdqm/cronjobs/cronlogs/TkMapProducer_cron.log 2>&1
+20 * * * * /data/users/event_display/dpgtkdqm/cronjobs/TkMapsCronjob/TkMapsCronjob/cronTkMaps.sh > /data/users/event_display/dpgtkdqm/cronjobs/cronlogs/TkMapsCronjob_cron.log 2>&1
 ```
