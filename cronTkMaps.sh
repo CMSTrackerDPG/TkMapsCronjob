@@ -31,19 +31,51 @@ echo "Clean run lists"
 rm runs_To_*
 
 echo "Create new run lists"
-python3 listProducer.py -y 2025 --min 398080
+python3 listProducer.py -y 2025 --min 399200
 
+#pp or HI
+collision_mode="HI"
 
-echo "Launching TkMaps Express"
+#Standard for pp
+datasetExpress="StreamExpress"
+datasetPrompt="ZeroBias"
+#Change if HI
+if [[ "$collision_mode" == "HI" ]]; then
+    datasetExpress="StreamHIExpressRawPrime"
+    datasetPrompt="HIPhysicsRawPrime0"
+fi
+
+# Starting with Collisions runs TkMaps
+
+echo "Launching TkMaps Express - Collisions"
 
 Express_file="runs_To_TkMaps_Express.txt"
 while read -r number; do
-  source /data/users/event_display/dpgtkdqm/remotescripts/TkMapGeneration/tkmapsFromCronjob.sh "StreamExpress $number"
+  source /data/users/event_display/dpgtkdqm/remotescripts/TkMapGeneration/tkmapsFromCronjob.sh "$datasetExpress $number"
 done < "$Express_file"
 
-echo "Launching TkMaps Prompt"
+echo "Launching TkMaps Prompt - Collisions"
 
 Prompt_file="runs_To_TkMaps_Prompt.txt"
 while read -r number; do
-  source /data/users/event_display/dpgtkdqm/remotescripts/TkMapGeneration/tkmapsFromCronjob.sh "ZeroBias $number"
+  source /data/users/event_display/dpgtkdqm/remotescripts/TkMapGeneration/tkmapsFromCronjob.sh "$datasetPrompt $number"
+done < "$Prompt_file"
+
+# Moving to Cosmics runs TkMaps
+
+datasetExpressCosmics="StreamExpressCosmics"
+datasetPromptCosmics="Cosmics"
+
+echo "Launching TkMaps Express - Cosmics"
+
+Express_file="runs_To_TkMaps_ExpressCosmics.txt"
+while read -r number; do
+  source /data/users/event_display/dpgtkdqm/remotescripts/TkMapGeneration/tkmapsFromCronjob.sh "$datasetExpressCosmics $number"
+done < "$Express_file"
+
+echo "Launching TkMaps Prompt - Cosmics"
+
+Prompt_file="runs_To_TkMaps_PromptCosmics.txt"
+while read -r number; do
+  source /data/users/event_display/dpgtkdqm/remotescripts/TkMapGeneration/tkmapsFromCronjob.sh "$datasetPromptCosmics $number"
 done < "$Prompt_file"
