@@ -17,6 +17,9 @@ import time
 def setRunDirectory(runNumber):
     # Don't forget to add an entry when there is a new era
     dirDict = { 
+	404100:['Data2026', 'HIRun2026'],\
+	401620:['Data2026', 'Run2026'],\
+	400650:['Data2026', 'Commissioning2026'],\
         399000:['Data2025', 'HIRun2025'],\
         394290:['Data2025', 'Run2025'],\
         394230:['Data2025', 'NeNeRun2025'],\

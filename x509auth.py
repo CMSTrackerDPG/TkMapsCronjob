@@ -1,5 +1,5 @@
 import os, sys, urllib.request, urllib.error, urllib.parse, http.client, json
-from ROOT import *
+#from ROOT import *
 from array import *
 
 serverurl = 'https://cmsweb.cern.ch/dqm/offline'

@@ -18,8 +18,8 @@ from datetime import datetime
 datasetExpress = '/StreamExpress/'
 datasetPrompt  = '/ZeroBias/'
 #HI
-datasetExpress = '/StreamHIExpressRawPrime/'
-datasetPrompt  = '/HIPhysicsRawPrime0/'
+#datasetExpress = '/StreamHIExpressRawPrime/'
+#datasetPrompt  = '/HIPhysicsRawPrime0/'
 #Cosmics
 datasetExpressCosmics = '/StreamExpressCosmics/'
 datasetPromptCosmics  = '/Cosmics/'
