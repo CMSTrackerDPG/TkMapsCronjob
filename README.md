@@ -14,6 +14,10 @@ Steps of the script:
 
 ## Setup on vocms
 
+New instructions to setup both TkMaps cronjob and production scripts in same folder: [https://tkdqm.docs.cern.ch/SetupTkMaps/](https://tkdqm.docs.cern.ch/SetupTkMaps/)
+
+## Setup TkMaps cronjob on vocms (old)
+
 1) Go to top folder 
 ```
 cd /data/users/event_display/dpgtkdqm/cronjobs/ 
